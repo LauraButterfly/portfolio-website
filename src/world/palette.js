@@ -1,0 +1,22 @@
+/** Soft pastel clay colours used across the island. */
+export const palette = {
+  grass: '#b5dea6',
+  grassDark: '#93c98d',
+  earth: '#d9b08f',
+  earthDark: '#bf9475',
+  stone: '#e6ddd2',
+  stoneDark: '#cfc3b6',
+  cream: '#fff4e4',
+  peach: '#ffc9b3',
+  coral: '#f29d8f',
+  pink: '#f4a7b9',
+  lavender: '#c9bdf2',
+  lilac: '#a99be0',
+  sky: '#bfe0f7',
+  skyDeep: '#8fc3e8',
+  mint: '#bfe8d4',
+  butter: '#ffe8a8',
+  wood: '#d4a883',
+  ink: '#5b4b63',
+  cloud: '#ffffff',
+};

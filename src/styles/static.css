@@ -1,0 +1,78 @@
+@import './base.css';
+
+.static-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  background: linear-gradient(180deg, var(--sky) 0, var(--cream) 420px) no-repeat, var(--cream);
+}
+
+.static-back {
+  margin: 0 0 24px;
+}
+
+.static-header {
+  padding: 8px 0 24px;
+}
+
+.static-header h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+}
+
+.static-kicker {
+  margin: 0 0 0.3em;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+
+.static-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 0;
+  margin: 1.2em 0 0;
+  list-style: none;
+  font-weight: 800;
+}
+
+.static-section {
+  margin-top: 32px;
+  padding: clamp(20px, 4vw, 36px);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-clay);
+}
+
+.section-intro {
+  margin-top: -0.2em;
+  color: var(--ink-soft);
+}
+
+.static-projects {
+  display: grid;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.static-project {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.static-project + .static-project {
+  padding-top: 28px;
+  border-top: 2px dashed var(--cream-deep);
+}
+
+.static-project .project-text p:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .static-project {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
