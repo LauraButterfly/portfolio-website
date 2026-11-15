@@ -1,6 +1,6 @@
 import headSvg from './head.svg?raw';
 
-const EYE_CENTER_Y = 146; // in head.svg units; both eyes share it
+const EYE_CENTER_Y = 150; // in head.svg units; both eyes share it
 const PUPIL_RANGE = { x: 4.5, y: 6 }; // max pupil offset inside the eye (svg units)
 const FULL_LOOK_DISTANCE = 260; // px from the eye at which pupils reach the edge
 const TILT = { x: 3, y: 2, deg: 2 }; // head parallax: px and degrees at most
