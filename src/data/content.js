@@ -10,8 +10,7 @@
  */
 
 export const site = {
-  name: 'Your Name',
-  title: 'Portfolio',
+  title: 'Laura Rissler',
   role: 'UI/UX & Computer Science Student',
   tagline: 'I design and build playful, accessible digital experiences.',
 };
@@ -120,7 +119,7 @@ export const about = {
   title: 'About me',
   paragraphs: [
     'Placeholder text: Hi! I study computer science with a focus on UI/UX design.',
-    'Write a few sentences about what you love making, what you are learning right now and what kind of work you are looking for.',
+    'This is aplaceholder for the second paragraph.',
   ],
   skills: ['UI/UX design', 'Figma', 'JavaScript', 'Three.js', 'Game development', 'User research'],
 };
@@ -132,5 +131,6 @@ export const contact = {
   links: [
     { label: 'GitHub', href: 'https://github.com/' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+    { label: 'Dribbble', href: 'https://dribbble.com/' },
   ],
 };
