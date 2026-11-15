@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 270" width="240" height="270" focusable="false">
+  <!--
+    Chibi head. Every top-level group has an id so parts can be tweaked or
+    replaced in a text editor, Figma or Inkscape. Layer order (back → front):
+    shadow, hair-back, face, eyes, pupils, lashes, glasses, hair-front, ears.
+
+    ids are prefixed automatically when the head is placed on a page
+    (see character.js), so several heads can exist at once.
+
+    Eye centres are at (95, 146) and (145, 146); character.js relies on that
+    for blinking. Pupils move inside the eye-clip shapes.
+  -->
+  <defs>
+    <radialGradient id="skin" cx="40%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#fdeadf" />
+      <stop offset="0.65" stop-color="#f8d3bf" />
+      <stop offset="1" stop-color="#ecb79e" />
+    </radialGradient>
+    <radialGradient id="ear-skin" cx="40%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#f8d3bf" />
+      <stop offset="1" stop-color="#e6a990" />
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a5945" />
+      <stop offset="0.55" stop-color="#6b4d3b" />
+      <stop offset="1" stop-color="#876650" />
+    </linearGradient>
+    <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f4434" />
+      <stop offset="1" stop-color="#755740" />
+    </linearGradient>
+    <radialGradient id="iris" cx="45%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#a27150" />
+      <stop offset="0.7" stop-color="#7a4f35" />
+      <stop offset="1" stop-color="#5a3826" />
+    </radialGradient>
+    <radialGradient id="lens" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#ffe3ec" stop-opacity="0.1" />
+      <stop offset="1" stop-color="#f4b6c8" stop-opacity="0.22" />
+    </radialGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4a3f55" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#4a3f55" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="eye-left-clip"><ellipse cx="95" cy="146" rx="16" ry="18" /></clipPath>
+    <clipPath id="eye-right-clip"><ellipse cx="145" cy="146" rx="16" ry="18" /></clipPath>
+  </defs>
+
+  <ellipse id="shadow-blob" cx="120" cy="256" rx="82" ry="11" fill="url(#shadow)" />
+
+  <g id="head">
+    <g id="hair-back">
+      <path
+        fill="url(#hair-dark)"
+        d="M26 122 C26 62 64 22 120 22 C176 22 214 62 214 122 L216 232 L206 222 L200 246 L190 226 L182 240 L174 214
+           C170 198 160 192 150 196 L90 196 C80 192 70 198 66 214 L58 240 L50 226 L40 246 L34 222 L24 232 Z"
+      />
+      <path d="M36 160 Q34 196 38 228 M204 160 Q206 196 202 228" stroke="#d7b088" stroke-width="1.8" stroke-linecap="round" opacity="0.45" fill="none" />
+    </g>
+
+    <g id="face">
+      <path
+        fill="url(#skin)"
+        d="M120 72 C170 72 190 104 190 140 C190 178 160 202 120 202 C80 202 50 178 50 140 C50 104 70 72 120 72 Z"
+      />
+      <ellipse id="face-highlight" cx="86" cy="104" rx="20" ry="11" fill="#fff" opacity="0.35" transform="rotate(-24 86 104)" />
+      <ellipse id="blush-left" cx="80" cy="174" rx="11" ry="6" fill="#f4a7b9" opacity="0.7" />
+      <ellipse id="blush-right" cx="160" cy="174" rx="11" ry="6" fill="#f4a7b9" opacity="0.7" />
+      <g id="nose">
+        <ellipse cx="120" cy="171" rx="5" ry="3.6" fill="#e9a08b" />
+        <ellipse cx="118.6" cy="169.8" rx="1.6" ry="1" fill="#fff" opacity="0.5" />
+      </g>
+      <path id="mouth" d="M112 181 Q120 188 128 181" stroke="#4a3f55" stroke-width="2.6" fill="none" stroke-linecap="round" />
+    </g>
+
+    <g id="eyes">
+      <ellipse cx="95" cy="146" rx="16" ry="18" fill="#fffaf6" />
+      <ellipse cx="145" cy="146" rx="16" ry="18" fill="#fffaf6" />
+    </g>
+
+    <g id="pupils">
+      <g clip-path="url(#eye-left-clip)">
+        <g id="pupil-left">
+          <circle cx="95" cy="147" r="11" fill="url(#iris)" />
+          <circle cx="95" cy="147" r="5.2" fill="#3a2820" />
+          <circle cx="91.5" cy="142.5" r="3.2" fill="#fff" />
+          <circle cx="98.5" cy="151" r="1.4" fill="#fff" opacity="0.8" />
+        </g>
+      </g>
+      <g clip-path="url(#eye-right-clip)">
+        <g id="pupil-right">
+          <circle cx="145" cy="147" r="11" fill="url(#iris)" />
+          <circle cx="145" cy="147" r="5.2" fill="#3a2820" />
+          <circle cx="141.5" cy="142.5" r="3.2" fill="#fff" />
+          <circle cx="148.5" cy="151" r="1.4" fill="#fff" opacity="0.8" />
+        </g>
+      </g>
+    </g>
+
+    <g id="lashes" stroke="#4a3f55" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M79 141 Q95 124 111 141" />
+      <path d="M79 141 L74 137" stroke-width="2.4" />
+      <path d="M129 141 Q145 124 161 141" />
+      <path d="M161 141 L166 137" stroke-width="2.4" />
+    </g>
+
+    <g id="glasses">
+      <circle cx="95" cy="146" r="23" fill="url(#lens)" stroke="#f0b3c4" stroke-width="2.4" />
+      <circle cx="145" cy="146" r="23" fill="url(#lens)" stroke="#f0b3c4" stroke-width="2.4" />
+      <path d="M118 143 Q120 139.5 122 143" stroke="#f0b3c4" stroke-width="2.4" fill="none" stroke-linecap="round" />
+      <path d="M72 142 L56 140 M168 142 L184 140" stroke="#f0b3c4" stroke-width="2.4" stroke-linecap="round" />
+      <path d="M80 133 Q86 126 94 125 M130 133 Q136 126 144 125" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.6" />
+    </g>
+
+    <g id="hair-front" fill="url(#hair)">
+      <path
+        d="M120 26 C78 26 42 58 40 108 L42 200 L46 236 L54 222 L60 244 L66 224 L72 236
+           C70 200 62 160 64 124 C66 100 90 84 120 76 Z"
+      />
+      <path
+        d="M120 26 C162 26 198 58 200 108 L198 200 L194 236 L186 222 L180 244 L174 224 L168 236
+           C170 200 178 160 176 124 C174 100 150 84 120 76 Z"
+      />
+      <ellipse id="hair-shine" cx="82" cy="46" rx="22" ry="8" fill="#fff" opacity="0.16" transform="rotate(-28 82 46)" />
+      <g id="hair-highlights" stroke="#e2c08f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+        <path d="M104 34 C76 46 56 76 52 124" />
+        <path d="M54 156 Q52 190 57 222" />
+        <path d="M140 33 C170 46 186 80 189 116" />
+        <path d="M186 162 Q188 194 183 224" />
+      </g>
+    </g>
+
+    <g id="ears">
+      <ellipse cx="47" cy="150" rx="8.5" ry="12.5" fill="url(#ear-skin)" />
+      <ellipse cx="48.5" cy="151" rx="3.5" ry="6" fill="#e3a28a" opacity="0.6" />
+      <ellipse cx="193" cy="150" rx="8.5" ry="12.5" fill="url(#ear-skin)" />
+      <ellipse cx="191.5" cy="151" rx="3.5" ry="6" fill="#e3a28a" opacity="0.6" />
+    </g>
+  </g>
+</svg>

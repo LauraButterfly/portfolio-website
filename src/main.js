@@ -3,8 +3,12 @@ import { places, placesById } from './places.js';
 import { createOverlay } from './ui/overlay.js';
 import { showScreen } from './ui/screens.js';
 import { motion } from './ui/motion.js';
+import { createCharacter } from './character/character.js';
 
 const $ = (id) => document.getElementById(id);
+
+// Menu character (animates itself only while the menu is visible).
+createCharacter($('menu-character'));
 
 /** The 3D world, created the first time the user presses Play. */
 let world = null;
