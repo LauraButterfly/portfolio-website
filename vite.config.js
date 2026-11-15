@@ -8,7 +8,7 @@ const contentFile = resolve(import.meta.dirname, 'src/data/content.js');
 
 /**
  * Fills HTML pages from src/data/content.js at build time:
- * - {{site.name}}, {{site.tagline}}, ... tokens in any page
+ * - {{site.title}}, {{site.tagline}}, ... tokens in any page
  * - the <!--static-content--> marker in static.html (the "Quit" page)
  * so names, descriptions and the static page are real, crawlable HTML.
  */

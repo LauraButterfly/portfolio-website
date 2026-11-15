@@ -23,7 +23,7 @@ export function renderStaticPage({ site, categories, projects, about, contact })
   return `
     <header class="static-header">
       <p class="static-kicker">${esc(site.role)}</p>
-      <h1>${esc(site.name)} · ${esc(site.title)}</h1>
+      <h1>${esc(site.title)}</h1>
       <p>${esc(site.tagline)}</p>
       <nav aria-label="Sections">
         <ul>

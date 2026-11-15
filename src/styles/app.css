@@ -56,7 +56,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 34rem;
 }
 
 .menu-kicker {
@@ -70,6 +69,14 @@ body {
   font-size: clamp(3rem, 10vw, 6rem);
   letter-spacing: -0.02em;
   text-shadow: 0 4px 0 rgb(255 255 255 / 0.6);
+}
+
+/* Side-by-side layout: keep the name on one line, scaling with the window. */
+@media (min-width: 721px) {
+  .menu-title {
+    font-size: clamp(3rem, 6.5vw, 6rem);
+    white-space: nowrap;
+  }
 }
 
 .menu-actions {
